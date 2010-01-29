@@ -1,0 +1,89 @@
+% Generic article template with commonly used packages.
+% Includes the standard theorem environments.
+\documentclass[a4paper,english,final]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{graphicx}
+
+\usepackage{textcomp}
+\usepackage{setspace}
+
+\usepackage{hyperref}
+\hypersetup{
+  a4paper,
+  bookmarksnumbered,
+  bookmarksopen,
+  bookmarksopenlevel=0,
+  colorlinks,
+% for colors, check package xcolor
+%   anchorcolor=anchorcolor,
+    citecolor=blue,
+%   linkcolor=linkcolor,
+	pdfauthor={},
+	pdftitle={},
+	pdfsubject={},
+	pdfkeywords={},
+%   plainpages=false,
+%   urlcolor=urlcolor
+}
+
+\usepackage{verbatim}
+
+\usepackage{amsmath,amssymb}
+\usepackage[amsmath,thmmarks]{ntheorem}
+
+
+% Custom theorem environments
+\newtheorem{sectioncounter}{}[section]
+
+\theoremsymbol{\ensuremath{_\Box}}
+\newtheorem{definition}[sectioncounter]{Definition}
+\newtheorem{example}[sectioncounter]{Example}
+\newtheorem{theorem}[sectioncounter]{Theorem}
+\newtheorem{lemma}[sectioncounter]{Lemma}
+\newtheorem{proposition}[sectioncounter]{Proposition}
+\newtheorem{corollary}[sectioncounter]{Corollary}
+\newtheorem{problem}[sectioncounter]{Problem}
+
+\theoremsymbol{\ensuremath{_\blacksquare}}
+\newtheorem*{proof}{Proof}
+
+
+% If we want a glossary
+%\usepackage{glossary}
+
+% Better citations
+\usepackage{cite}
+
+
+% Fonts!
+% For examples etc. see
+% http://ctan.tug.org/tex-archive/info/Free_Math_Font_Survey/survey.html
+ 
+% Charter text and Euler math
+\usepackage{charter}
+\usepackage[small,euler-digits]{eulervm}
+
+% Charter text and Math Design math
+%\usepackage[charter]{mathdesign}
+
+% Palatino text and Euler math
+%\usepackage{pxfonts}
+%\usepackage[small,euler-digits]{eulervm}
+
+
+% Usual data, author, title, etc.
+\title{}
+
+\author{}
+
+
+\begin{document}
+
+\maketitle
+
+
+\end{document}
+

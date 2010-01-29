@@ -1,0 +1,79 @@
+% Beamer presentation template. 
+%
+% No heavy math processing --- just the defaults.
+%
+% The options set do the following:
+%
+% serif - Use serif font (default is sans-serif)
+% mathserif, professionalfont - Palatino text and Euler math look nice
+% with these.
+% slidestop - slide content start at top left (default is centered)
+\documentclass[english,slidestop,serif,mathserif,professionalfont]{beamer}
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{hyperref}
+\hypersetup{
+  a4paper,
+  bookmarksnumbered,
+  bookmarksopen,
+  bookmarksopenlevel=0,
+  colorlinks,
+% for colors, check package xcolor
+%   anchorcolor=anchorcolor,
+    citecolor=blue,
+%   linkcolor=linkcolor,
+	pdfauthor={},
+	pdftitle={},
+	pdfsubject={},
+	pdfkeywords={},
+%   plainpages=false,
+%   urlcolor=urlcolor
+}
+
+
+% Fonts!  
+% Palatino text and Euler math work well with the "mathserif"
+% and "professionalfont" options in \documentclass above.
+% For more, see http://math.ecnu.edu.cn/~latex/beamer/MathFonts.pdf
+
+% Palatino text and Euler math.
+\usepackage{pxfonts}
+\usepackage[euler-digits]{eulervm}
+
+
+% Theme. See http://www.pletscher.org/writings/latex/beamerthemes.php
+% for many more.
+\usetheme{Copenhagen}
+
+
+% Frame numbers in foot hack:
+% If the theme you chose above does not have numbers in the 
+% footer, and you want them, these lines may work (try them!).
+\expandafter\def\expandafter\insertshorttitle\expandafter{%
+  \insertshorttitle\hfill\insertframenumber\,/\,\inserttotalframenumber}
+
+
+% Standard data: title, author, etc.
+\title{}
+\author{}
+\institute{}
+
+% Set date explicitly, e.g. "January 2010", or leave blank for no date.
+%\date{}
+
+
+\begin{document}
+
+\maketitle{}
+
+%\section*{Outline}
+\begin{frame}
+  \frametitle{Outline}
+  \tableofcontents
+\end{frame}
+
+
+\end{document}
