@@ -1,0 +1,179 @@
+% A simple template for a book-length non-fiction manuscript.
+% Includes the standard theorem environments.
+\documentclass[a4paper,english,12pt,final]{memoir}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{graphicx}
+
+\usepackage{textcomp}
+
+% Line spacing
+\usepackage{setspace}
+%\onehalfspacing
+%\doublespacing
+
+\usepackage{hyperref}
+\hypersetup{
+  a4paper,
+  bookmarksnumbered,
+  bookmarksopen,
+  bookmarksopenlevel=0,
+  colorlinks,
+% for colors, check package xcolor
+%   anchorcolor=anchorcolor,
+    citecolor=blue,
+%   linkcolor=linkcolor,
+	pdfauthor={},
+	pdftitle={},
+	pdfsubject={},
+	pdfkeywords={},
+%   plainpages=false,
+%   urlcolor=urlcolor
+}
+
+\usepackage{verbatim}
+
+\usepackage{amsmath,amssymb}
+\usepackage[amsmath,thmmarks]{ntheorem}
+
+
+% Custom theorem environments
+\newtheorem{sectioncounter}{}[section]
+
+\theoremsymbol{\ensuremath{_\Box}}
+\newtheorem{definition}[sectioncounter]{Definition}
+\newtheorem{example}[sectioncounter]{Example}
+\newtheorem{theorem}[sectioncounter]{Theorem}
+\newtheorem{lemma}[sectioncounter]{Lemma}
+\newtheorem{proposition}[sectioncounter]{Proposition}
+\newtheorem{corollary}[sectioncounter]{Corollary}
+\newtheorem{problem}[sectioncounter]{Problem}
+
+\theoremsymbol{\ensuremath{_\blacksquare}}
+\newtheorem*{proof}{Proof}
+
+
+% If we want a glossary
+%\usepackage{glossary}
+
+% Better citations
+\usepackage{cite}
+
+
+% Fonts!
+% For examples etc. see
+% http://ctan.tug.org/tex-archive/info/Free_Math_Font_Survey/survey.html
+ 
+% Charter text and Euler math
+\usepackage{charter}
+\usepackage[small,euler-digits]{eulervm}
+
+% Charter text and Math Design math
+%\usepackage[charter]{mathdesign}
+
+% Palatino text and Euler math
+%\usepackage{pxfonts}
+%\usepackage[small,euler-digits]{eulervm}
+
+
+
+% Book-specific things.
+% This code was written by Roger Antonsen from the University of Oslo. 
+
+% The code sets up headers and footers,
+% margins, and some memoir-specific things.
+\setsecnumdepth{subsection}
+\maxsecnumdepth{subsection}
+\settocdepth{subsection}
+
+\makepagestyle{rantonse}
+
+\makeatletter
+\makepsmarks{rantonse}{
+  \def\chaptermark##1{\markboth{\thechapter. ##1}{}} % \thechapter. \ ##1
+  \def\sectionmark##1{\markright{\thesection. ##1}{}}} % \thesection.  \ ##1
+\makeatother
+
+\makeatletter
+\@namedef{rantonseheadrule}{%
+  \hrule\@width \textwidth\@height 0.4pt \vskip-0.4pt}
+\makeatother
+
+\makeevenhead{rantonse}{\thepage}{}{\scshape\leftmark}
+\makeoddhead{rantonse}{\scshape\rightmark}{}{\thepage}
+% \makeevenfoot{rantonse}{}{}{}
+% \makeoddfoot{rantonse}{}{}{\thepage}
+
+\pagestyle{rantonse}
+
+\setlrmargins{*}{*}{1}
+
+
+% The two commands below cause the above code to take effect.
+\checkandfixthelayout
+\fixpdflayout
+
+% This command makes lists more compact. Comment it out if you 
+% want more spacing in lists.
+\firmlists
+
+% ---
+% Roger Antonsen's code ends here.
+
+
+\begin{document}
+
+% The front matter is the TOC and similar things.
+\frontmatter*
+
+% These commands set up a simple title page.
+% Title page by Roger Antonsen.
+\thispagestyle{empty}
+
+\vfill
+
+\begin{center}
+  \Huge{\scshape Book Title}
+\end{center}
+\vspace{2ex}
+\noindent\rule{\textwidth}{1pt}
+\vspace{2ex}
+
+\begin{flushright}
+  \Large{A. N. Onymous}
+\end{flushright}
+
+\vspace{2cm}
+
+\begin{center}
+  \Large{\scshape Master Thesis}
+\end{center}
+
+\vfill
+
+%\begin{center}
+%  \includegraphics{logo.pdf}
+%\end{center}
+
+\begin{center}
+\Large{Dept.~of Indeterminate Studies\\
+Unseen University\\
+May, 2025}
+\end{center}
+
+
+\newpage
+\tableofcontents
+\newpage
+
+
+% The main matter is the text of the book.
+\mainmatter*
+
+
+% The back matter could e.g. contain references.
+\backmatter*
+
+\end{document}
