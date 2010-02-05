@@ -1,0 +1,66 @@
+% Beamer presentation template, standard (sans-serif) fonts.
+%
+% No heavy math processing --- just the defaults.
+%
+% The options set do the following:
+%
+% slidestop - slide content start at top left (default is centered)
+\documentclass[english,slidestop]{beamer}
+
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{hyperref}
+\hypersetup{
+  a4paper,
+  bookmarksnumbered,
+  bookmarksopen,
+  bookmarksopenlevel=0,
+  colorlinks,
+% for colors, check package xcolor
+%   anchorcolor=anchorcolor,
+    citecolor=blue,
+%   linkcolor=linkcolor,
+	pdfauthor={},
+	pdftitle={},
+	pdfsubject={},
+	pdfkeywords={},
+%   plainpages=false,
+%   urlcolor=urlcolor
+}
+
+
+% Theme. See http://www.pletscher.org/writings/latex/beamerthemes.php
+% for many more.
+\usetheme{Montpellier}
+
+
+% Frame numbers in foot hack:
+% If the theme you chose above does not have numbers in the 
+% footer, and you want them, these lines may work (try them!).
+\expandafter\def\expandafter\insertshorttitle\expandafter{%
+  \insertshorttitle\hfill\insertframenumber\,/\,\inserttotalframenumber}
+
+
+% Standard data: title, author, etc.
+\title{}
+\author{}
+\institute{}
+
+% Set date explicitly, e.g. "January 2010", or leave blank for no date.
+%\date{}
+
+
+\begin{document}
+
+\maketitle{}
+
+%\section*{Outline}
+\begin{frame}
+  \frametitle{Outline}
+  \tableofcontents
+\end{frame}
+
+
+\end{document}
