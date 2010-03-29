@@ -16,6 +16,11 @@
 %\onehalfspacing
 %\doublespacing
 
+% Better citations
+% Conflicts with hyperref, so the citations won't be hyperlinked.
+% Not much of an issue in LNCS, as papers are made for printing.
+\usepackage{cite}
+
 \usepackage{hyperref}
 \hypersetup{
   a4paper,
@@ -43,9 +48,6 @@
 
 % If we want a glossary
 %\usepackage{glossary}
-
-% Better citations
-\usepackage{cite}
 
 
 % Usual data, author, title, etc.
