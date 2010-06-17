@@ -7,10 +7,10 @@ document type.
 To use one of these templates, take a copy, put your content inside,
 and compile it.
 
-All the packages needed for full functionality are free software,
-usually LPPL (http://www.latex-project.org/lppl/), and are availible
-on CTAN. The full version of TeX Live (package texlive-full on ubuntu)
-is sufficient.
+Almost all the packages needed for full functionality are free
+software, usually LPPL (http://www.latex-project.org/lppl/), and are
+availible on CTAN. The full version of TeX Live (package texlive-full
+on ubuntu) is sufficient.
 
 This is experimental software meant for advanced users; assume nothing
 works, and you may be pleasantly surprised. And when it breaks, you
