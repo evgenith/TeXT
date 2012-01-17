@@ -8,7 +8,7 @@
 % mathserif, professionalfont - Palatino text and Euler math look nice
 % with these.
 % slidestop - slide content start at top left (default is centered)
-\documentclass[english,slidestop,serif,mathserif,professionalfont]{beamer}
+\documentclass[english,slidestop]{beamer}
 
 \usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
@@ -33,20 +33,23 @@
 %   urlcolor=urlcolor
 }
 
-
 % Fonts!  
-% Palatino text and Euler math work well with the "mathserif"
-% and "professionalfont" options in \documentclass above.
+% Concrete is big and readable, while Euler math looks very nice and 
+% is easy to distinguish. 
 % For more, see http://math.ecnu.edu.cn/~latex/beamer/MathFonts.pdf
 
-% Palatino text and Euler math.
-\usepackage{pxfonts}
+% Concrete text and Euler math.
+\usepackage{concrete}
 \usepackage[euler-digits]{eulervm}
+
+% Serif version please
+\usefonttheme{serif}
+\usefonttheme{professionalfonts}
 
 
 % Theme. See http://www.pletscher.org/writings/latex/beamerthemes.php
 % for many more.
-\usetheme{Copenhagen}
+\usetheme{Boadilla}
 
 % No nav symbols
 \beamertemplatenavigationsymbolsempty
