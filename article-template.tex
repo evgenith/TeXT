@@ -9,6 +9,10 @@
 
 \usepackage{textcomp}
 
+\usepackage{cmap}
+
+\usepackage[usenames,svgnames,hyperref]{xcolor}
+
 % Line spacing
 \usepackage{setspace}
 %\onehalfspacing
@@ -23,8 +27,8 @@
   colorlinks,
 % for colors, check package xcolor
 %   anchorcolor=anchorcolor,
-    citecolor=blue,
-%   linkcolor=linkcolor,
+    citecolor=teal,
+    linkcolor=Crimson,
 	pdfauthor={},
 	pdftitle={},
 	pdfsubject={},
@@ -35,31 +39,38 @@
 
 \usepackage{verbatim}
 
-\usepackage[thmmarks]{ntheorem}
+\usepackage{mathtools}
+%\usepackage{amssymb}
+\usepackage[thmmarks,amsmath,hyperref]{ntheorem}
 
 
 % Custom theorem environments
 \newtheorem{sectioncounter}{}[section]
 
 \theoremsymbol{\ensuremath{_\Box}}
+
+\theorembodyfont{\upshape}
 \newtheorem{definition}[sectioncounter]{Definition}
 \newtheorem{example}[sectioncounter]{Example}
+\newtheorem{problem}[sectioncounter]{Problem}
+\newtheorem{algo}[sectioncounter]{Algorithm}
+\newtheorem{notation}[sectioncounter]{Notation}
+
+\theorembodyfont{\itshape}
 \newtheorem{theorem}[sectioncounter]{Theorem}
 \newtheorem{lemma}[sectioncounter]{Lemma}
 \newtheorem{proposition}[sectioncounter]{Proposition}
 \newtheorem{corollary}[sectioncounter]{Corollary}
-\newtheorem{problem}[sectioncounter]{Problem}
+\newtheorem{property}[sectioncounter]{Property}
 
+\theorembodyfont{\upshape}
 \theoremsymbol{\ensuremath{_\blacksquare}}
 \newtheorem*{proof}{Proof}
 
 
+
 % If we want a glossary
 %\usepackage{glossary}
-
-% Better citations
-\usepackage{cite}
-
 
 % Fonts!
 % For examples etc. see
@@ -78,6 +89,26 @@
 %\usepackage{pxfonts}
 %\usepackage[small,euler-digits]{eulervm}
 
+% Clever references
+\usepackage[sort]{cleveref}
+
+%Sections
+\crefname{section}{Section}{sections}
+\crefname{subsection}{Section}{sections}
+\crefname{subsubsection}{Section}{sections}
+
+% Theorem environments
+\crefname{definition}{Definition}{definitions}
+\crefname{theorem}{Theorem}{theorems}
+\crefname{lemma}{Lemma}{lemmata}
+\crefname{propositions}{Proposition}{propositions}
+\crefname{corollary}{Corollary}{corollaries}
+\crefname{property}{Property}{properties}
+
+\crefname{example}{Example}{examples}
+\crefname{problem}{Problem}{problems}
+\crefname{notation}{Notation}{Notation}
+\crefname{algo}{Algorithm}{algorithms}
 
 % Usual data, author, title, etc.
 \title{}
