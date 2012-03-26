@@ -2,13 +2,7 @@
 %
 % No heavy math processing --- just the defaults.
 %
-% The options set do the following:
-%
-% serif - Use serif font (default is sans-serif)
-% mathserif, professionalfont - Palatino text and Euler math look nice
-% with these.
-% slidestop - slide content start at top left (default is centered)
-\documentclass[english,slidestop]{beamer}
+\documentclass[english,xcolor=pdftex,svgnames]{beamer}
 
 \usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
@@ -57,8 +51,8 @@
 % Frame numbers in foot hack:
 % If the theme you chose above does not have numbers in the 
 % footer, and you want them, these lines may work (try them!).
-\expandafter\def\expandafter\insertshorttitle\expandafter{%
-  \insertshorttitle\hfill\insertframenumber\,/\,\inserttotalframenumber}
+%\expandafter\def\expandafter\insertshorttitle\expandafter{%
+%  \insertshorttitle\hfill\insertframenumber\,/\,\inserttotalframenumber}
 
 
 % Standard data: title, author, etc.
